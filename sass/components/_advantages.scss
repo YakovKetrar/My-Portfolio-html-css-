@@ -1,0 +1,64 @@
+.advantages {
+    @media (max-width: $desktop) {
+    padding: 60px 0;
+    }
+    @media (min-width: $desktop) {
+        padding-top: 94px
+        }
+}
+.advantages-list{
+    @media (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    }
+.advantages-etem {
+    @media (min-width: $tablet) {
+        width: calc((100% - 4 * 15px)/2);
+        margin: 15px;
+    }
+    @media (min-width: $desktop) {
+        width: calc((100% - 8 * 15px)/4);
+    }
+    &::before {
+        margin-bottom: 30px;
+        display: block;
+        height: 120px;
+        content: "";
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $backgrnd-gray;
+    }
+    &:nth-child(1)::before {
+        background-image: url(../images/icon/antenna.svg); 
+    }
+    &:nth-child(2)::before {
+        background-image: url(../images/icon/clock.svg); 
+    }
+    &:nth-child(3)::before {
+        background-image: url(../images/icon/diagram.svg); 
+    }
+    &:nth-child(4)::before {
+        background-image: url(../images/icon/astronaut.svg); 
+    }
+}
+
+.advantages-etem-discription {
+    color: $main-gray;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+.advantages-etem-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-black;
+    margin-bottom: 10px;
+    @media (max-width: $tablet) {
+        text-align: center;
+    }
+}

@@ -1,0 +1,224 @@
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-aftehead;
+    @media (max-width: $tablet) {
+        height: 60px;
+    }
+    @media (min-width: $tablet) {
+        height: 80px;
+    }
+}
+
+.menu-button {
+    display: inline-flex;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 13px 8px;
+    @media (min-width: $tablet) {
+        display: none;
+    }
+}
+.menu-button .icon-close {
+    display: none;
+}
+.menu-button.is-open .icon-close {
+    display: block;
+}
+.menu-button.is-open .icon-menu {
+    display: none;
+}
+.menu-container {
+    display: none;
+    @media (max-width: $tablet) {
+        position: absolute;
+        height: 393px;
+        top: 61px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+    }
+    @media (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &.is-open {
+        display: block;
+        @media (min-width: $tablet) {
+            display: flex;
+        }
+        
+    }
+}
+
+
+.pages {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.pages-list {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    @media (max-width: $tablet) {
+        font-size: 18px;
+        margin: 40px 0 32px 0;
+    }
+    @media (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-left: 88px;
+    }
+    @media (min-width: $desktop) {
+        margin-left: 93px;
+        margin-right: 0;
+
+    }
+}
+.pages-etem {
+    @media (min-width: $tablet) {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+}
+.pages-link {
+    color: $main-black;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,&:focus {
+        color: $main-blue;
+    }
+    @media (max-width: $tablet) {
+        display: inline-block;
+        padding: 20px 0;
+    }
+    @media (min-width: $tablet) {
+        display: inline;
+        padding: 32px 0;
+    }
+    &-current {
+        position: relative;
+        color: $main-blue;
+        @media (max-width: $tablet) {
+            padding-bottom: 28px;
+        }
+    }
+    &-current::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-radius: 2px;
+        background-color:  $main-blue;
+        @media (max-width: $tablet) {
+            bottom: 16px;
+        }
+        @media (min-width: $tablet) {
+            bottom: 0;
+        }
+    }
+}
+
+.contacts-list {   
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    @media (max-width: $tablet) {
+        font-size: 18px;
+    }
+    @media (min-width: $tablet) {
+        font-size: 12px;
+        
+    }
+    @media (min-width: $desktop) {
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.contacts-etem {
+    @media (min-width: $desktop) {
+    &:not(:last-child) {
+        margin-right:  30px;
+    }
+    } 
+}
+.contacts-link {
+    display: inline-block;
+    align-items: center;
+    color: $main-gray;
+    transition: color 250ms $timing-function;
+    &:hover,&:focus {
+        color: $main-blue;
+    }
+    @media (max-width: $tablet) {
+        padding: 8px 0;
+    }
+    @media (min-width: $tablet) {
+        padding: 5px 0;
+    }
+    @media (min-width: $desktop) {
+        display: flex;
+        padding: 30px 0;
+    }
+}
+.contacts-svg {
+    &-email {
+        margin-right: 10px;
+        fill: currentcolor;
+    }
+    &-phone {
+        margin-right: 10px;
+        fill: currentcolor;
+    }
+    @media (max-width: $tablet) {
+        &-email {
+            width: 16px;
+            height: 11px;
+        }
+        &-phone {
+            width: 10px;
+            height: 15px;
+        }
+    }
+    @media (min-width: $tablet) {
+        &-email {
+            width: 14px;
+            height: 10px;
+        }
+        &-phone {
+            width: 10px;
+            height: 14px;
+        }
+    }
+    @media (min-width: $desktop) {
+        &-email {
+            width: 16px;
+            height: 12px;
+        }
+        &-phone {
+            width: 12px;
+            height: 16px;
+        }
+    }
+}
