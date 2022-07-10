@@ -1,3 +1,47 @@
+
+.modal__block {
+  padding: 80px 0;
+  display: block;
+  &::before {
+    border: 2px solid $main-blue;
+    display: inline-block;
+    max-width: 95%;
+    position: relative;
+    top: 25px;
+    left:  10%;
+    padding: 10px;
+    content: "Модальное окно / адаптивная верстка и checkbox";
+    font-weight: 100;
+    color: $main-white;
+    background-color:  $main-blue;
+    border-radius: 20px 20px 0px 20px;
+    @media (max-width: $desktop) {
+      left:  0%;
+    }
+  }
+  & div {
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.modal__button {
+  padding: 20px;
+  display: block;
+  font-family: inherit;
+  color: $main-white;
+  background: rgb(202, 33, 180);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.06em;
+  border: 0;
+  border-radius: 4px;
+
+  
+}
 .backdrop {
     position: fixed;
     top: 0;
@@ -27,7 +71,12 @@
     transition: transform 250ms $timing-function;
 
     width: 528px;
-    height: 581px;
+    min-height: 581px;
+
+    @media (max-width: $tablet) {
+      width: 400px;
+      max-width: 95vw;
+    }
 }
 .modal-close {
     padding: 5px 5px;
@@ -155,17 +204,27 @@
     &::before {
         content: "";
         margin-right: 10px;
+        margin-bottom: 4px;
         height: 16px;
         width: 16px;
         border: 2px solid $main-black;
         border-radius: 3px;
         transition: background-color 250ms $timing-function, border 250ms $timing-function;
     }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items:baseline
+    }
+
 }
 .checkbox-link {
     margin-left: 3px;
     color: $main-blue;
     text-decoration: underline;
+    @media (max-width: $tablet) {
+      margin-left: 0;
+    }
 }
 
 
@@ -174,6 +233,7 @@
     margin: 30px auto 0 auto;
     height: 50px;
     width: 200px;
+    max-width: 50vw;
 
     text-align: center;
     font-weight: 700;
