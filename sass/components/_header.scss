@@ -1,10 +1,53 @@
-
+header {
+  padding: 94px 15px 0 15px;
+}
 .header {
+  margin: 0 auto;
+  max-width: 1170px;
+  height: 400px;
+  border-radius: 50px;
+  background: $backgrd-black;
+  background-image: linear-gradient(
+  to right,
+  rgba(47, 48, 58, 0.6),
+  rgba(47, 48, 58, 0.6)
+  ), 
+  url(../images/backgrd-inhead.jpg);
+  background-position: center;
+  background-size: cover;
+  color: $main-white;
+
+  .gitlink {
+    border: 2px solid $main-blue;
+    display: inline-block;
+    max-width: 95%;
+    position: relative;
+    top: -55px;
+    left: 10px;
+    padding: 10px;
+    content: "Блок собран на FLEX / Адаптивная верстка";
+    font-weight: 100;
+    color: $main-white;
+    background-color:  $main-blue;
+    border-radius: 20px 20px 20px 0px;
+    &:hover {
+      background-color:  $main-white;
+      color: $main-blue
+    }
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (max-width: $mobile) {
+      top: -60px;
+    }
+
+  }
+}
+.panel {
+
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid $border-aftehead;
     @media (max-width: $tablet) {
         height: 60px;
     }
@@ -16,6 +59,7 @@
 .menu-button {
     display: inline-flex;
     background-color: transparent;
+    fill: $main-white;
     border: none;
     width: 40px;
     height: 40px;
@@ -30,6 +74,7 @@
 }
 .menu-button.is-open .icon-close {
     display: block;
+    z-index: 2;
 }
 .menu-button.is-open .icon-menu {
     display: none;
@@ -38,24 +83,22 @@
     display: none;
     @media (max-width: $tablet) {
         position: absolute;
-        height: 393px;
-        top: 61px;
-        left: 0;
-        width: 100%;
-        background-color: white;
+        top: 60px;
+        left: -14px;
+        height: 340px;
+        width: 478px;
+        max-width: 100vw;
+        max-height: 100vh;
+        border-radius: 0 0 50px 50px;
+        background-color: $backgrd-black;
         text-align: center;
+        z-index: 1;
     }
     @media (min-width: $tablet) {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+      display: flex; 
     }
     &.is-open {
-        display: block;
-        @media (min-width: $tablet) {
-            display: flex;
-        }
-        
+        display: block;       
     }
 }
 
@@ -64,40 +107,49 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    @media (max-width: $tablet) {
+      padding: 0 20px;
+      justify-content: space-between;
+    }
 
 }
 .pages-list {
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 500; 
+    font-size: 15px;
     line-height: 1.2;
     letter-spacing: 0.02em;
 
+
     @media (max-width: $tablet) {
         font-size: 18px;
-        margin: 40px 0 32px 0;
+        margin: 20px 0 20px 0;
     }
     @media (min-width: $tablet) {
         display: flex;
         align-items: center;
-        font-size: 14px;
-        margin-left: 88px;
+
     }
     @media (min-width: $desktop) {
-        margin-left: 93px;
-        margin-right: 0;
 
     }
 }
 .pages-etem {
-    @media (min-width: $tablet) {
-        &:not(:last-child) {
-            margin-right: 50px;
-        }
+  margin: 0;
+    &:not(:last-child) {
+      margin-right: 50px;
+  }
+  @media (max-width: $desktop) {
+    &:not(:last-child) {
+        margin-right: 30px;
     }
 }
+}
 .pages-link {
-    color: $main-black;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: $main-white;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,&:focus {
         color: $main-blue;
@@ -120,17 +172,14 @@
     &-current::after {
         content: "";
         width: 100%;
-        height: 4px;
+        height: 6px;
         position: absolute;
         left: 0;
-        bottom: 0;
-        border-radius: 2px;
+        bottom: 25%;
+        border-radius: 5px;
         background-color:  $main-blue;
         @media (max-width: $tablet) {
             bottom: 16px;
-        }
-        @media (min-width: $tablet) {
-            bottom: 0;
         }
     }
 }
@@ -146,12 +195,14 @@
     }
     @media (min-width: $tablet) {
         font-size: 12px;
+        margin-left: 40px;
         
     }
     @media (min-width: $desktop) {
         font-size: 14px;
         display: flex;
         justify-content: space-between;
+        margin-left: 80px;
     }
 
 }
@@ -166,7 +217,7 @@
 .contacts-link {
     display: inline-block;
     align-items: center;
-    color: $main-gray;
+    color: $main-white;
     transition: color 250ms $timing-function;
     &:hover,&:focus {
         color: $main-blue;
@@ -221,4 +272,21 @@
             height: 16px;
         }
     }
+}
+
+.main-title {
+  margin-top: 140px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-white;
+  @media (max-width: $desktop) {
+    margin-top: 130px;
+    font-size: 22px;
+    line-height: 1.62;
+  }
+  @media (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 1.36;
+  }
 }

@@ -8,13 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.min.css">
-    <title>Студия</title>
+    <title>Сайт-Портфолио</title>
 </head>
 <body>
     <header>
-        <div class="header container">
+      
+      <div class="header">
+        <a href="https://github.com/YakovKetrar/My-Portfolio-html-css-" target="_blank" class="gitlink">Ссылка на репозиторий этого проекта  <u>www.github.com</u></a>
+        <div class="container panel">
             <nav class="pages">
-                <a href="./index.html" class="logo logo-header"><span class="logo-header-firstpart">Web</span>Studio</a>
+                <a href="./index.html" class="logo logo-header"><span class="logo-header-firstpart">Iakov</span>Ketrar</a>
                 <button type="button" class="menu-button" data-menu-button>
                     <svg width="26" height="16" aria-lable="Переключатель мобильного меню">
                         <use class="icon-close" href="./images/icon/sprite.svg#menu-close"></use>
@@ -24,81 +27,92 @@
                 <div class="menu-container" data-menu>
                     <ul class="pages-list">
                             <li class="pages-etem">
-                                <a href="./index.html" class="pages-link pages-link-current">Студия</a>
+                                <a href="./index.html" class="pages-link pages-link-current">HTML/CSS</a>
                             </li>
                             <li class="pages-etem">
-                                <a href="./portfolio.html" class="pages-link">Портфолио</a>
+                                <a href="./js-api.html" class="pages-link">JS/API</a>
                             </li>
                             <li class="pages-etem">
-                                <a href="./example.html" class="pages-link">Контакты</a>
+                                <a href="./react.html" class="pages-link">REACT</a>
                             </li>
                     </ul>
                     <ul class="contacts-list">
                         <li class="contacts-etem">
-                            <a class="contacts-link" href="mailto:info@devstudio.com">
-                                <svg class="contacts-svg contacts-svg-email">
-                                    <use href="./images/icon/sprite.svg#envelope"></use>
-                                </svg>
-                                info@devstudio.com
-                            </a>
+                          <a class="contacts-link" onClick="javascript:window.open('mailto:yakov.ketrar@gmail.com', 'mail');event.preventDefault()" href="mailto:yakov.ketrar@gmail.com">
+                            <svg class="contacts-svg contacts-svg-email">
+                              <use href="./images/icon/sprite.svg#envelope"></use>
+                            </svg>
+                            yakov.ketrar@gmail.com
+                          </a>
                         </li>
                         <li class="contacts-etem" >                   
-                            <a class="contacts-link" href="tel:+380961111111">
+                            <a class="contacts-link" href="tel:+79880210300">
                                 <svg class="contacts-svg contacts-svg-phone">
                                     <use href="./images/icon/sprite.svg#smartphone"></use>
                                 </svg>
-                                +38 096 111 11 11
+                                +7 (988) 021 0300
                             </a>
                         </li>
                     </ul>
                 </div>               
             </nav>
         </div>
+        <h1 class="main-title">Добро пожаловать на мой сайт-портфолио </h1>
+      </div>
+
     </header>
     <main>
-        <section class="head">
-            <div class="container">
-                <h1 class="main-title">Эффективные решения  <br> для вашего бизнеса</h1>
-                <button class="modul-butoon" data-modal-open>Заказать услугу</button>
-            </div>
+        <!-- <section class="container head">
+          <h1 class="main-title">Добро пожаловать на мой сайт-портфолио </h1>
+          <button class="modul-butoon" data-modal-open>Открыть модальное окно</button>
+        </section> -->
+
+        <section class="grid">
+          <ul class="grid__list">
+            <li class="grid__item">
+              <div class="grid_img">
+              </div>
+            </li>
+            <li class="grid__item">
+              <div class="grid_img">
+              </div>
+            </li>
+            <li class="grid__item">
+              <div class="grid_img">
+              </div>
+            </li>
+            <li class="grid__item">
+              <div class="grid_img">
+              </div>
+            </li>
+            <li class="grid__item">
+              <div class="grid_img">
+              </div>
+            </li>
+          </ul>
         </section>
-        <section class="advantages container">
-                <ul class="advantages-list">
-                    <li class="advantages-etem">
-                        <h3 class="advantages-etem-title">ВНИМАНИЕ К ДЕТАЛЯМ</h3>
-                        <p class="advantages-etem-discription">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>           
-                    </li>
-                    <li class="advantages-etem">
-                        <h3 class="advantages-etem-title">ПУНКТУАЛЬНОСТЬ</h3>
-                        <p class="advantages-etem-discription">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>           
-                    </li>
-                    <li class="advantages-etem">
-                        <h3 class="advantages-etem-title">ПЛАНИРОВАНИЕ</h3>
-                        <p class="advantages-etem-discription">Равным образом консультация с широким активом в значительной степени обуславливает.</p>           
-                    </li>
-                    <li class="advantages-etem">  
-                        <h3 class="advantages-etem-title">СОВРЕМЕННЫЕ ТЕХНОЛОГИИ</h3>
-                        <p class="advantages-etem-discription">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>           
-                    </li>
-                </ul>
+
+        <section class="flex container">
+          <ul class="flex__list">
+              <li class="flex__etem">
+                  <h3 class="flex__title">Оглавление</h3>
+                  <p class="flex__text">текст текст текст текст текст текст текст текст текст текст текст текст</p>           
+              </li>
+              <li class="flex__etem">
+                  <h3 class="flex__title">Оглавление</h3>
+                  <p class="flex__text">текст текст текст текст текст текст текст текст текст текст текст текст</p>           
+              </li>
+              <li class="flex__etem">
+                  <h3 class="flex__title">Оглавление</h3>
+                  <p class="flex__text">текст текст текст текст текст текст текст текст текст текст текст текст</p>           
+              </li>
+              <li class="flex__etem">  
+                  <h3 class="flex__title">Оглавление</h3>
+                  <p class="flex__text">текст текст текст текст текст текст текст текст текст текст текст текст</p>           
+              </li>
+          </ul>
         </section>
-        <section class="example container">
-                <h2 class="section-title">Чем мы занимаемся</h2>
-                <ul class="example-list">
-                        <li class="example-item">
-                            <img src="./images/example1.jpg" width="370" height="294" alt="Картинка 1">
-                            <p class="example-item-discription">декстопные приложения</p>
-                        </li>
-                        <li class="example-item">
-                            <img src="./images/example2.jpg" width="370" height="294" alt="Картинка 2">
-                            <p class="example-item-discription">мобильные приложения</p>
-                        </li>
-                        <li class="example-item">
-                            <img src="./images/example3.jpg" width="370" height="294" alt="Картинка 3">
-                            <p class="example-item-discription">дизайнерские решения</p>
-                        </li>
-                </ul>
-        </section>
+
         <section class="team">
             <div class="container">
                 <h2 class="section-title">Наша команда</h2>
@@ -222,57 +236,13 @@
                 </ul>
             </div>
         </section>
-        <section class="clients container">
-                <h2 class="section-title">Постоянные клиенты</h2>
-                <ul class="clients-list">
-                    <li class="clients-etem">
-                        <a class="clients-link" href="">
-                            <svg class="clients-svg">
-                                <use href="./images/icon/sprite.svg#logo1"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="clients-etem">
-                        <a class="clients-link" href="">
-                            <svg class="clients-svg">
-                                <use href="./images/icon/sprite.svg#logo2"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="clients-etem">
-                        <a class="clients-link" href="">
-                            <svg class="clients-svg">
-                                <use href="./images/icon/sprite.svg#logo3"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="clients-etem">
-                        <a class="clients-link" href="">
-                            <svg class="clients-svg">
-                                <use href="./images/icon/sprite.svg#logo4"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="clients-etem">
-                        <a class="clients-link" href="">
-                            <svg class="clients-svg">
-                                <use href="./images/icon/sprite.svg#logo5"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="clients-etem">
-                        <a class="clients-link" href="">
-                            <svg class="clients-svg">
-                                <use href="./images/icon/sprite.svg#logo6"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+        <section class="container">
+          <button class="modul-butoon" data-modal-open>Открыть модальное окно</button>
         </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="footer-list container">
-            <div>
+            <!-- <div>
                 <a href="./index.html" class="logo logo-footer"><span class="logo-footer-firstpart">Web</span>Studio</a>
                 <address class="address">
                     <a class="address-link" href="">г. Киев, пр-т Леси Украинки, 26</a>
@@ -316,7 +286,7 @@
                         </svg>
                     </button>
                  </form>
-            </div>
+            </div> -->
         </div>
     </footer>
 
@@ -375,7 +345,7 @@
                 </svg>
             </button>
         </div>        
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>

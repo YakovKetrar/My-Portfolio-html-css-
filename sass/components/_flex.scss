@@ -1,19 +1,38 @@
-.advantages {
+.flex {
+    &::before {
+      border: 2px solid $main-blue;
+      display: inline-block;
+      max-width: 95%;
+      position: relative;
+      top: -20px;
+      left: 10px;
+      padding: 10px;
+      content: "Блок собран на FLEX / Адаптивная верстка";
+      font-weight: 100;
+      color: $main-white;
+      background-color:  $main-blue;
+      border-radius: 20px 20px 20px 0px;
+      &:hover {
+        background-color:  $main-white;
+        color: $main-blue
+      }
+      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
     @media (max-width: $desktop) {
-    padding: 60px 0;
+      padding: 60px 0;
     }
     @media (min-width: $desktop) {
-        padding-top: 94px
-        }
+      padding-top: 94px;
+    }
 }
-.advantages-list{
+.flex__list{
     @media (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
     }
     }
-.advantages-etem {
+.flex__etem {
     @media (min-width: $tablet) {
         width: calc((100% - 4 * 15px)/2);
         margin: 15px;
@@ -44,21 +63,21 @@
     }
 }
 
-.advantages-etem-discription {
+.flex__title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-black;
+  margin-bottom: 10px;
+  @media (max-width: $tablet) {
+    text-align: center;
+  }
+}
+.flex__text {
     color: $main-gray;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-}
-.advantages-etem-title{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $main-black;
-    margin-bottom: 10px;
-    @media (max-width: $tablet) {
-        text-align: center;
-    }
 }
